@@ -1,0 +1,126 @@
+name: LightRanks
+main: LightRanks\Main
+version: 1.0.0
+api: 5.0.0
+author: Egor21545
+description: Мощная система рангов с 20+ командами
+
+permissions:
+  lightranks.admin:
+    description: "Все права LightRanks"
+    default: op
+    children:
+      lightranks.command.setrank: true
+      lightranks.command.removerank: true
+      lightranks.command.promote: true
+      lightranks.command.demote: true
+      lightranks.command.addrank: true
+      lightranks.command.removerankdef: true
+      lightranks.command.setrankprice: true
+      lightranks.command.rankbackup: true
+  lightranks.command.setrank:
+    default: op
+  lightranks.command.removerank:
+    default: op
+  lightranks.command.promote:
+    default: op
+  lightranks.command.demote:
+    default: op
+  lightranks.command.rankinfo:
+    default: true
+  lightranks.command.rankslist:
+    default: true
+  lightranks.command.myrank:
+    default: true
+  lightranks.command.buyrank:
+    default: true
+
+commands:
+  setrank:
+    description: "Выдать ранг игроку"
+    usage: "/setrank <игрок> <ранг>"
+    permission: lightranks.command.setrank
+  removerank:
+    description: "Снять ранг с игрока"
+    usage: "/removerank <игрок>"
+    permission: lightranks.command.removerank
+  tempaddrank:
+    description: "Выдать временный ранг"
+    usage: "/tempaddrank <игрок> <ранг> <время>"
+    permission: lightranks.command.setrank
+  tempremoverank:
+    description: "Снять временный ранг"
+    usage: "/tempremoverank <игрок>"
+    permission: lightranks.command.removerank
+  promote:
+    description: "Повысить игрока на 1 ранг"
+    usage: "/promote <игрок>"
+    permission: lightranks.command.promote
+  demote:
+    description: "Понизить игрока на 1 ранг"
+    usage: "/demote <игрок>"
+    permission: lightranks.command.demote
+  rankinfo:
+    description: "Информация о ранге"
+    usage: "/rankinfo <ранг>"
+    permission: lightranks.command.rankinfo
+  rankslist:
+    description: "Список всех рангов"
+    usage: "/rankslist"
+    permission: lightranks.command.rankslist
+  myrank:
+    description: "Узнать свой ранг"
+    usage: "/myrank"
+    permission: lightranks.command.myrank
+  playerranks:
+    description: "Ранги игрока"
+    usage: "/playerranks <игрок>"
+    permission: lightranks.command.rankinfo
+  setprefix:
+    description: "Установить префикс ранга"
+    usage: "/setprefix <ранг> <префикс>"
+    permission: lightranks.admin
+  setsuffix:
+    description: "Установить суффикс ранга"
+    usage: "/setsuffix <ранг> <суффикс>"
+    permission: lightranks.admin
+  setchatcolor:
+    description: "Установить цвет чата для ранга"
+    usage: "/setchatcolor <ранг> <цвет>"
+    permission: lightranks.admin
+  addrank:
+    description: "Создать новый ранг"
+    usage: "/addrank <название>"
+    permission: lightranks.admin
+  removerankdef:
+    description: "Удалить ранг"
+    usage: "/removerankdef <ранг>"
+    permission: lightranks.admin
+  setrankperm:
+    description: "Установить право для ранга"
+    usage: "/setrankperm <ранг> <право>"
+    permission: lightranks.admin
+  setrankpriority:
+    description: "Установить приоритет ранга"
+    usage: "/setrankpriority <ранг> <приоритет>"
+    permission: lightranks.admin
+  buyrank:
+    description: "Купить ранг"
+    usage: "/buyrank <ранг>"
+    permission: lightranks.command.buyrank
+  setrankprice:
+    description: "Установить цену ранга"
+    usage: "/setrankprice <ранг> <цена>"
+    permission: lightranks.admin
+  resetplayer:
+    description: "Сбросить ранг игрока"
+    usage: "/resetplayer <игрок>"
+    permission: lightranks.admin
+  rankbackup:
+    description: "Создать бэкап рангов"
+    usage: "/rankbackup"
+    permission: lightranks.admin
+  rankrestore:
+    description: "Восстановить ранги из бэкапа"
+    usage: "/rankrestore"
+    permission: lightranks.admin

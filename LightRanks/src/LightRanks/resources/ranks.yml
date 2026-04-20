@@ -1,0 +1,38 @@
+# Конфигурация рангов LightRanks
+
+default-rank: "Guest"
+
+ranks:
+  Guest:
+    prefix: "§7[Гость]"
+    suffix: ""
+    priority: 0
+    price: 0
+  Player:
+    prefix: "§a[Игрок]"
+    suffix: ""
+    priority: 1
+    price: 0
+  VIP:
+    prefix: "§6[§lVIP§r§6]"
+    suffix: ""
+    priority: 2
+    price: 5000
+  Moder:
+    prefix: "§b[§lМод§r§b]"
+    suffix: ""
+    priority: 3
+    price: 0
+  Admin:
+    prefix: "§c[§lАдмин§r§c]"
+    suffix: ""
+    priority: 4
+    price: 0
+  Owner:
+    prefix: "§4[§lВладелец§r§4]"
+    suffix: ""
+    priority: 5
+    price: 0
+
+players: []
+temp_ranks: []
